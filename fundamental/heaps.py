@@ -40,3 +40,6 @@ print('Now we can loop thru the heap arr and pop the elements')
 while len(arr):
     print(heapq.heappop(arr))
 print('arr heap after heappop: ', arr)
+
+
+

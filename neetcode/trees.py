@@ -30,3 +30,26 @@ class Solution:
 
         dfs(root)
         return res
+
+# Given a binary tree, determine if it is
+# height-balanced
+
+# A height-balanced binary tree is a binary tree in which
+# the depth of the two subtrees of every node never differs by more than one.
+
+class Solution:
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        def height(self, root):
+            if not root:
+                return True, -1
+            else:
+                balancedL, hL = height(root.left)
+                balancedR, hR = height(root.right)
+                return (balancedL and balancedR and (abs(hL - hR) <= 1)), 1 + max(hL, hR)
+
+        re, h = height(root)
+        return re
+
+# Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+#
+# Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
